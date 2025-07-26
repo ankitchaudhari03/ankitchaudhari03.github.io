@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ankit Chaudhari - Engineer, Web Developer & UI/UX Enthusiast</title>
+    <meta name="description" content="Discover Ankit Chaudhari's journey as an engineer and web developer, passionate about front-end, UI/UX, and creating visually appealing digital solutions. Learn about his academic background from Zeal College of Engineering and Research (ZCOER), Pune, and interests in tech events, Java, C++, and exploring historical sites in Jalna, Sindkhedraja.">
+    <meta name="keywords" content="Ankit Chaudhari, ankitchaudhari03, about me, personal story, developer journey, web development philosophy, front-end, UI/UX, user experience, web design, engineer, technology, innovation, Java, C++, Python, HTML, CSS, JavaScript, Zeal College of Engineering and Research, ZCOER, Narhe, Pune, Maharashtra Board, Jalna, Sindkhedraja, historical places, hiking, photography, gaming, volunteering, tech events">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <meta property="og:title" content="About Ankit Chaudhari - Web Developer & UI/UX Enthusiast">
+    <meta property="og:description" content="Discover Ankit Chaudhari's journey as an engineer and web developer, passionate about front-end, UI/UX, and creating visually appealing digital solutions.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/about.html"> <meta property="og:type" content="profile"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ankitchaudhari03">
+    <meta name="twitter:creator" content="@ankitchaudhari03">
+    <meta name="twitter:title" content="About Ankit Chaudhari - Web Developer & UI/UX Enthusiast">
+    <meta name="twitter:description" content="Discover Ankit Chaudhari's journey as an engineer and web developer, passionate about front-end, UI/UX, and creating visually appealing digital solutions.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base styles for the body and HTML */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #374151; /* Darker gray text for readability */
+            margin: 0; /* Ensure no default body margin */
+            padding: 0; /* Ensure no default body padding */
+            line-height: 1.6; /* Improve readability of text */
+        }
+
+        /* Smooth scrolling for internal links (though we're using new tabs, good for any internal page links) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styles for the active navigation link (can be applied via JS on page load) */
+        .nav-link.active {
+            font-weight: 600;
+            color: #4f46e5; /* Indigo 600 for active link */
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 2px;
+        }
+
+        /* Header and Navigation Styles */
+        .site-header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            position: sticky; /* Keeps header at the top */
+            top: 0;
+            z-index: 50; /* Ensures header is above other content */
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px; /* Max width for content */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .site-logo {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-logo:hover {
+            color: #3730a3; /* Darker indigo on hover */
+        }
+
+        .nav-links-desktop a, .nav-links-desktop button {
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 0.375rem; /* rounded-md */
+            padding: 0.5rem 0.75rem; /* py-2 px-3 */
+        }
+
+        .nav-links-desktop a:hover, .nav-links-desktop button:hover {
+            color: #4f46e5; /* indigo-600 */
+            background-color: #f3f4f6; /* gray-100 */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Mobile Menu Button (md:hidden) */
+        .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown on mobile */
+        }
+        @media (max-width: 767px) { /* md breakpoint is 768px */
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .nav-links-desktop { /* Hide desktop nav on mobile */
+                display: none;
+            }
+        }
+
+        /* Mobile Menu (initially hidden) */
+        .mobile-nav-links {
+            display: none; /* Hidden by default, toggled by JS */
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 0.375rem;
+        }
+        .mobile-nav-links a, .mobile-nav-links button {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #4b5563; /* gray-700 */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border-radius: 0.375rem;
+        }
+        .mobile-nav-links a:hover, .mobile-nav-links button:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+
+        /* General Section Styles (for all content sections like About, Skills, Projects) */
+        .content-section {
+            padding-top: 4rem; /* py-16 */
+            padding-bottom: 4rem; /* py-16 */
+            background-color: #ffffff; /* bg-white */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-md */
+            max-width: 80rem; /* max-w-6xl */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem; /* my-8 */
+            margin-bottom: 2rem; /* my-8 */
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .content-section .container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            text-align: center;
+            color: #4338ca; /* indigo-700 */
+            margin-bottom: 3rem; /* mb-12 */
+        }
+
+        /* About Section Specific Styles */
+        .about-journey, .about-philosophy, .about-strengths, .about-education, .about-hobbies {
+            margin-bottom: 4rem; /* mb-16 */
+        }
+
+        .about-journey .flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .about-journey .flex {
+                flex-direction: row;
+                align-items: flex-start; /* Align text to top */
+                gap: 3rem; /* space-x-12 */
+            }
+        }
+
+        .about-image, .philosophy-image, .hobby-image {
+            width: 100%;
+            max-width: 20rem; /* max-w-xs for about-image, adjusted for others */
+            height: auto;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+            margin-bottom: 2rem; /* mb-8 */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .about-image:hover, .philosophy-image:hover, .hobby-image:hover {
+            transform: scale(1.05);
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .about-image {
+                margin-bottom: 0;
+                max-width: none; /* Reset max-width for larger screens */
+                width: 33.333333%; /* md:w-1/3 */
+            }
+        }
+
+        .philosophy-image {
+            max-width: 30rem; /* max-w-md */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+        }
+
+        .hobby-image {
+            max-width: 25rem; /* max-w-sm */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+        }
+
+        .about-journey h2, .about-philosophy h2, .about-strengths h2, .about-education h2, .about-hobbies h2, .about-cta h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 600; /* font-semibold */
+            color: #4f46e5; /* indigo-600 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .about-philosophy h2, .about-strengths h2, .about-education h2, .about-hobbies h2, .about-cta h2 {
+            text-align: center;
+        }
+
+        .about-journey p, .about-philosophy p, .about-strengths p, .about-education p { /* Removed .about-hobbies p from here */
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75; /* leading-relaxed */
+            color: #4b5563; /* gray-700 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .about-journey p:last-child, .about-philosophy p:last-child, .about-strengths p:last-child, .about-education p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-education .text-center .font-semibold {
+            font-size: 1.25rem; /* text-xl */
+            color: #374151; /* gray-800 */
+        }
+
+        /* Original .about-hobbies ul styles - mostly superseded by new card structure */
+        /*
+        .about-hobbies ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+            max-width: 36rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .about-hobbies ul li {
+            margin-bottom: 0.5rem;
+        }
+        */
+
+        .about-cta .btn-primary {
+            background-color: #4f46e5; /* indigo-600 */
+            color: #ffffff;
+        }
+        .about-cta .btn-primary:hover {
+            background-color: #4338ca; /* indigo-700 */
+        }
+
+        .about-cta .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #4f46e5; /* indigo-600 */
+            color: #4f46e5; /* indigo-600 */
+        }
+        .about-cta .btn-secondary:hover {
+            background-color: #4f46e5; /* indigo-600 */
+            color: #ffffff;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background-color: #1f2937; /* gray-800 */
+            color: #ffffff;
+            padding-top: 2rem; /* py-8 */
+            padding-bottom: 2rem; /* py-8 */
+            margin-top: 3rem; /* mt-12 */
+            border-top-left-radius: 0.5rem; /* rounded-t-lg */
+            border-top-right-radius: 0.5rem; /* rounded-t-lg */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* shadow-inner (custom) */
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .copyright-text {
+            margin-bottom: 1rem; /* mb-4 */
+            color: #d1d5db; /* gray-300 */
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* space-x-6 */
+        }
+
+        .social-link {
+            color: #9ca3af; /* gray-400 */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #ffffff;
+        }
+
+        /* Social Media Icons (SVG paths for default state) */
+        .social-icon { /* This class is for the SVG icons in contact modal/page, not footer links */
+            width: 2rem; /* w-8 */
+            height: 2rem; /* h-8 */
+            fill: currentColor; /* Use current text color */
+            transition: color 0.3s ease;
+        }
+        .social-icon:hover {
+            color: #4f46e5; /* indigo-600 */
+        }
+
+        /* --- College Image Carousel Styles --- */
+        .college-image-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 40rem; /* max-w-lg from original college-image */
+            height: 350px; /* Fixed height for the carousel, adjust as needed */
+            margin: 2rem auto 0; /* mx-auto mt-8 */
+            overflow: hidden; /* Hide overflowing images */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+        }
+
+        .college-image-carousel img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover the area */
+            opacity: 0; /* Start hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+            animation: imageFade 12s infinite; /* Total animation duration based on 4 images * 3s per image */
+        }
+
+        /* Animation delays for each image */
+        .college-image-carousel img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .college-image-carousel img:nth-child(2) {
+            animation-delay: 3s; /* Show after 3 seconds */
+        }
+        .college-image-carousel img:nth-child(3) {
+            animation-delay: 6s; /* Show after 6 seconds */
+        }
+        .college-image-carousel img:nth-child(4) {
+            animation-delay: 9s; /* Show after 9 seconds */
+        }
+
+        /* Keyframes for the image fade animation */
+        @keyframes imageFade {
+            0% { opacity: 0; } /* Start invisible */
+            8% { opacity: 1; } /* Fade in */
+            25% { opacity: 1; } /* Stay visible */
+            33% { opacity: 0; } /* Fade out */
+            100% { opacity: 0; } /* Stay invisible until next cycle */
+        }
+        /* Adjust animation for 3 images if needed, change 12s to 9s (3*3s) and remove 4th child delay */
+        /* If using 3 images: animation: imageFade 9s infinite; */
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="site-header bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="main-nav container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="site-logo text-2xl font-bold text-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">Ankit Chaudhari</a>
+            <div class="nav-links-desktop hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Home</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">About</a>
+                <a href="skills.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Skills & Experience</a>
+                <a href="projects.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Projects</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="mobile-menu-toggle md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-nav-links hidden md:hidden bg-white shadow-lg py-2 mt-2 mx-4 rounded-md">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">About</a>
+            <a href="skills.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Skills & Experience</a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Projects</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Contact</a>
+        </div>
+    </header>
+
+    <section id="about-me-section" class="content-section bg-white">
+        <div class="container mx-auto">
+            <h1 class="section-title">About Ankit Chaudhari</h1>
+
+            <div class="about-journey flex flex-col md:flex-row items-center md:space-x-12 mb-16">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="images/About-me.png" alt="Ankit Chaudhari - About Me" class="about-image rounded-lg shadow-xl mx-auto w-full max-w-xs md:max-w-none object-cover transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/350x350/6366f1/ffffff?text=About+Image';">
+                </div>
+                <div class="md:w-2/3 text-lg leading-relaxed text-gray-700">
+                    <h2 class="text-3xl font-semibold text-indigo-600 mb-4">My Journey into the Digital Realm</h2>
+                    <p class="mb-4">
+                        My fascination with technology began not with a single moment, but with a growing curiosity about how complex systems could be distilled into elegant, user-friendly experiences. As an aspiring engineer, I've always been drawn to the logic and creativity inherent in building something from the ground up. This drive led me to the dynamic world of web development, where every line of code is an opportunity to solve a problem and innovate.
+                    </p>
+                    <p>
+                        I believe that true engineering lies in transforming abstract ideas into tangible, impactful digital solutions. This career path allows me to constantly learn, adapt, and contribute to the ever-evolving landscape of technology, a challenge I embrace with enthusiasm.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-philosophy text-lg leading-relaxed text-gray-700 mb-16">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4 text-center">My Philosophy & Approach</h2>
+                <p class="mb-4">
+                    My approach to web development is deeply rooted in <b>user-centric design</b> and a commitment to <b>clean, efficient code</b>. I am particularly passionate about <b>UI/UX</b>, believing that a truly great digital product is not just functional, but also intuitive, accessible, and visually captivating. I love the challenge of making things look good and ensuring that every interaction feels seamless and delightful.
+                </p>
+                <p class="mb-4">
+                    I thrive on <b>continuous improvement</b> and <b>collaboration</b>. I see every project as an opportunity to learn something new, refine my skills, and work alongside talented individuals to achieve a shared vision. My core values revolve around <b>innovation</b>, <b>efficiency</b>, and delivering solutions that genuinely enhance the user's experience.
+                </p>
+                <div class="flex justify-center mt-8">
+                    <img src="images/Design-philosopy.png" alt="Design Philosophy" class="philosophy-image rounded-lg shadow-md w-full max-w-md object-cover transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/500x300/6366f1/ffffff?text=Design+Philosophy';">
+                </div>
+            </div>
+
+            <div class="about-strengths text-lg leading-relaxed text-gray-700 mb-16">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4 text-center">Key Strengths & What I Bring</h2>
+                <p class="mb-4">
+                    My primary strength lies in my ability to <b>translate complex requirements into intuitive and visually appealing user interfaces</b>. I excel at bridging the gap between design concepts and functional implementation, ensuring that the final product not only meets technical specifications but also provides an exceptional user experience.
+                </p>
+                <p>
+                    I am adept at front-end development, specializing in building responsive and dynamic web applications. My dedication to detail, combined with a proactive approach to problem-solving, allows me to deliver high-quality code and contribute effectively to project success.
+                </p>
+            </div>
+
+            <div class="about-education text-lg leading-relaxed text-gray-700 mb-16">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4 text-center">Education & Academic Journey</h2>
+                <div class="text-center">
+                    <p class="mb-2">
+                        I completed my Higher Secondary Education (11th and 12th grades) under the <b>Maharashtra State Board</b>.
+                    </p>
+                    <p class="mb-4">
+                        Currently, I am pursuing my <b>Bachelor of Technology (B.Tech) in Information Technology</b> from:
+                    </p>
+                    <p class="font-semibold text-xl text-gray-800">
+                        Zeal Technical Institute, Zeal College of Engineering and Research (ZCOER), Narhe, Pune.
+                    </p>
+                    <div class="college-image-carousel">
+                        <img src="images/Zeal 1.jpg" alt="Zeal College Campus View 1" onerror="this.onerror=null;this.src='https://placehold.co/600x350/6366f1/ffffff?text=ZCOER+1';">
+                        <img src="images/Zeal 2.jpg" alt="Zeal College Campus View 2" onerror="this.onerror=null;this.src='https://placehold.co/600x350/6366f1/ffffff?text=ZCOER+2';">
+                        <img src="images/Zeal 3.jpg" alt="Zeal College Campus View 3" onerror="this.onerror=null;this.src='https://placehold.co/600x350/6366f1/ffffff?text=ZCOER+3';">
+                        <img src="images/Zeal 4 .jpg" alt="Zeal College Campus View 4" onerror="this.onerror=null;this.src='https://placehold.co/600x350/6366f1/ffffff?text=ZCOER+4';">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-hobbies text-lg leading-relaxed text-gray-700 mb-16">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4 text-center">Beyond the Code: My Interests</h2>
+                <p class="mb-8 text-center max-w-2xl mx-auto">
+                    While my passion for coding and design is immense, I firmly believe in a well-rounded life. When I step away from the keyboard, you'll often find me engaged in activities that <b>fuel my creativity</b>, <b>broaden my horizons</b>, and <b>allow me to connect with the world</b> in different ways:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="hobby-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="font-bold text-2xl text-indigo-700 mb-3 flex items-center">
+                            <span class="mr-2">📚</span> Reading
+                        </h3>
+                        <p>Delving into diverse books broadens my perspective and fuels my creativity, often sparking <b>new ideas</b> for my projects and deepening my understanding of different subjects.</p>
+                    </div>
+
+                    <div class="hobby-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="font-bold text-2xl text-indigo-700 mb-3 flex items-center">
+                            <span class="mr-2">🌍</span> Traveling & Exploration
+                        </h3>
+                        <p>I have a deep appreciation for history and culture. Exploring <b>ancient forts, grand palaces, and insightful museums</b> not only provides a refreshing break but also inspires new ways of looking at design and problem-solving.</p>
+                    </div>
+
+                    <div class="hobby-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="font-bold text-2xl text-indigo-700 mb-3 flex items-center">
+                            <span class="mr-2">⛰️</span> Hiking
+                        </h3>
+                        <p>Connecting with nature on a hike provides a refreshing break from screens and helps <b>clear my mind</b>, fostering a sense of peace and clarity that invigorates my work.</p>
+                    </div>
+
+                    <div class="hobby-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="font-bold text-2xl text-indigo-700 mb-3 flex items-center">
+                            <span class="mr-2">📸</span> Photography
+                        </h3>
+                        <p>Capturing moments and unique perspectives through a lens allows me to appreciate <b>visual aesthetics and composition</b>, skills that directly translate into my UI/UX work.</p>
+                    </div>
+
+                    <div class="hobby-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="font-bold text-2xl text-indigo-700 mb-3 flex items-center">
+                            <span class="mr-2">🤝</span> Volunteering
+                        </h3>
+                        <p>Giving back to the community is incredibly important to me, fostering <b>empathy, teamwork</b>, and a sense of shared responsibility that extends to collaborative projects.</p>
+                    </div>
+
+                    <div class="hobby-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="font-bold text-2xl text-indigo-700 mb-3 flex items-center">
+                            <span class="mr-2">💡</span> Tech Events & Participation
+                        </h3>
+                        <p>Staying connected with the dynamic tech community by attending and participating in various events keeps me updated with the <b>latest trends</b> and fosters valuable networking opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 mt-12">
+                    <img src="images/Hobbilies.jpg" alt="Ankit Chaudhari's Hobbies" class="hobby-image rounded-lg shadow-md w-full max-w-sm object-cover transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/400x250/6366f1/ffffff?text=Hobbies';">
+                    <img src="images/TechEvent.jpg" alt="Participating in Tech Event" class="hobby-image rounded-lg shadow-md w-full max-w-sm object-cover transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/400x250/6366f1/ffffff?text=Tech+Event';">
+                </div>
+            </div>
+
+            <div class="about-cta text-center mt-16">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-8">Ready to see more?</h2>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="projects.html" class="btn btn-primary bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105" target="_blank">
+                        Explore My Projects
+                    </a>
+                    <a href="images/Comming Soon.png" class="btn btn-secondary bg-transparent border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105" target="_blank" title="View Ankit Chaudhari's Resume">
+                        View My Resume
+                    </a>
+                    <a href="https://linkedin.com/in/ankitchaudhari03" class="btn btn-secondary bg-transparent border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105" target="_blank" title="Connect with Ankit on LinkedIn">
+                        Let's Connect (LinkedIn)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer bg-gray-800 text-white py-8 mt-12 rounded-t-lg shadow-inner">
+        <div class="footer-content container mx-auto px-4 text-center">
+            <p class="copyright-text mb-4">© 2025 Ankit Chaudhari. All rights reserved.</p>
+            <div class="social-links flex jankitchaudhari03ustify-center space-x-6">
+                <a href="https://in.linkedin.com/in/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's LinkedIn">LinkedIn</a>
+                <a href="https://github.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's GitHub">GitHub</a>
+                <a href="https://x.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's X (Twitter)">X</a>
+                <a href="https://youtube.com/@ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's YouTube">YouTube</a>
+                <a href="https://www.instagram.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

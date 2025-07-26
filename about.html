@@ -13,7 +13,9 @@
     <meta property="og:title" content="About Ankit Chaudhari - Web Developer & UI/UX Enthusiast">
     <meta property="og:description" content="Discover Ankit Chaudhari's journey as an engineer and web developer, passionate about front-end, UI/UX, and creating visually appealing digital solutions.">
     <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://ankitchaudhari03.github.io/about.html"> <meta property="og:type" content="profile"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://ankitchaudhari03.github.io/about.html">
+    <meta property="og:type" content="profile">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ankitchaudhari03">
     <meta name="twitter:creator" content="@ankitchaudhari03">
     <meta name="twitter:title" content="About Ankit Chaudhari - Web Developer & UI/UX Enthusiast">
@@ -34,12 +36,12 @@
             line-height: 1.6; /* Improve readability of text */
         }
 
-        /* Smooth scrolling for internal links (though we're using new tabs, good for any internal page links) */
+        /* Smooth scrolling for internal links */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Styles for the active navigation link (can be applied via JS on page load) */
+        /* Styles for the active navigation link (applied via JS on page load) */
         .nav-link.active {
             font-weight: 600;
             color: #4f46e5; /* Indigo 600 for active link */
@@ -103,9 +105,9 @@
             }
         }
 
-        /* Mobile Menu (initially hidden) */
+        /* Mobile Menu */
         .mobile-nav-links {
-            display: none; /* Hidden by default, toggled by JS */
+            /* This section defines visual styles; 'display' is controlled by JS toggling 'hidden' class */
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding-top: 0.5rem;
@@ -114,6 +116,7 @@
             margin-left: 1rem;
             margin-right: 1rem;
             border-radius: 0.375rem;
+            /* Do NOT set display: none; here, as the 'hidden' Tailwind class handles initial state. */
         }
         .mobile-nav-links a, .mobile-nav-links button {
             display: block;
@@ -232,23 +235,6 @@
             font-size: 1.25rem; /* text-xl */
             color: #374151; /* gray-800 */
         }
-
-        /* Original .about-hobbies ul styles - mostly superseded by new card structure */
-        /*
-        .about-hobbies ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            color: #4b5563;
-            margin-bottom: 1rem;
-            max-width: 36rem;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-        }
-        .about-hobbies ul li {
-            margin-bottom: 0.5rem;
-        }
-        */
 
         .about-cta .btn-primary {
             background-color: #4f46e5; /* indigo-600 */
@@ -558,6 +544,26 @@
                     mobileMenu.classList.toggle('hidden');
                 });
             }
+
+            // Highlight active navigation link
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-links a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+
+                // Special handling for the home page when accessed via root URL or index.html
+                if (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('/index.html'))) {
+                    link.classList.add('active');
+                }
+                // General case for all other pages
+                else if (currentPath.endsWith(linkPath) && linkPath !== 'index.html') {
+                    link.classList.add('active');
+                }
+                else {
+                    link.classList.remove('active'); // Ensure other links are not active
+                }
+            });
         });
     </script>
 </body>

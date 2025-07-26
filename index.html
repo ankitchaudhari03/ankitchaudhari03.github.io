@@ -11,9 +11,9 @@
     <meta name="keywords" content="Ankit Chaudhari, ankitchaudhari03, web developer, portfolio, front-end, UI/UX, user experience, web design, web development, projects, GitHub, LinkedIn, X, YouTube, Pinterest, Twitter, innovation, technology">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <!-- Apple Touch Icon (for iOS devices) -->
-    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- Open Graph / Facebook / LinkedIn / X (Twitter) Meta Tags -->
     <meta property="og:title" content="Ankit Chaudhari - Web Developer & Innovator">
@@ -105,11 +105,11 @@
 
         /* Mobile Menu Button (md:hidden) */
         .mobile-menu-toggle {
-            display: none; /* Hidden by default, shown on mobile */
+            display: none; /* Hidden by default, shown on on small screens */
         }
         @media (max-width: 767px) { /* md breakpoint is 768px */
             .mobile-menu-toggle {
-                display: block;
+                display: block; /* Show hamburger icon */
             }
             .nav-links-desktop { /* Hide desktop nav on mobile */
                 display: none;
@@ -127,6 +127,9 @@
             margin-left: 1rem;
             margin-right: 1rem;
             border-radius: 0.375rem;
+        }
+        .mobile-nav-links.active { /* Class added by JS to show menu */
+            display: block;
         }
         .mobile-nav-links a, .mobile-nav-links button {
             display: block;
@@ -417,11 +420,11 @@
             <p class="copyright-text mb-4">&copy; 2025 Ankit Chaudhari. All rights reserved.</p>
             <div class="social-links flex justify-center space-x-6">
                 <!-- Direct links to your public profiles for SEO and visibility -->
-                <a href="https://in.linkedin.com/in/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's LinkedIn">LinkedIn</a>
+                <a href="https://linkedin.com/in/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's LinkedIn">LinkedIn</a>
                 <a href="https://github.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's GitHub">GitHub</a>
-                <a href="https://x.com/ankichaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's X (Twitter)">X</a>
+                <a href="https://x.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's X (Twitter)">X</a>
                 <a href="https://youtube.com/@ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's YouTube">YouTube</a>
-                <a href="https://www.instagram.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Instagram">Instagram</a>
+                <a href="https://pinterest.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Pinterest">Pinterest</a>
                 <!-- Instagram is private, so not linked here for public visibility -->
             </div>
         </div>
@@ -436,6 +439,9 @@
 
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
+                    // Toggle the 'active' class on the mobile menu
+                    mobileMenu.classList.toggle('active');
+                    // Also toggle 'hidden' for Tailwind's display utility
                     mobileMenu.classList.toggle('hidden');
                 });
             }

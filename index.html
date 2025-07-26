@@ -3,39 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary SEO Title: Crucial for search engines -->
     <title>Ankit Chaudhari - Official Portfolio | Web Developer & Innovator</title>
-    <!-- Meta Description: Provides a summary for search results -->
     <meta name="description" content="Explore the official portfolio of Ankit Chaudhari (ankitchaudhari03), showcasing web development projects, front-end expertise, UI/UX design, and a passion for creating impactful digital experiences. Connect with Ankit on GitHub, LinkedIn, X, and more.">
-    <!-- Keywords (less critical for modern SEO, but can be helpful) -->
     <meta name="keywords" content="Ankit Chaudhari, ankitchaudhari03, web developer, portfolio, front-end, UI/UX, user experience, web design, web development, projects, GitHub, LinkedIn, X, YouTube, Pinterest, Twitter, innovation, technology">
 
-    <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
-    <!-- Apple Touch Icon (for iOS devices) -->
     <link rel="apple-touch-icon" href="favicon.png">
 
-    <!-- Open Graph / Facebook / LinkedIn / X (Twitter) Meta Tags -->
     <meta property="og:title" content="Ankit Chaudhari - Web Developer & Innovator">
     <meta property="og:description" content="Explore the official portfolio of Ankit Chaudhari (ankitchaudhari03), showcasing web development projects, front-end expertise, UI/UX design, and a passion for creating impactful digital experiences.">
     <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://ankitchaudhari03.github.io/"> <!-- IMPORTANT: Replace with your actual website URL when deployed -->
-    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ankitchaudhari03.github.io/"> <meta property="og:type" content="website">
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ankitchaudhari03"> <!-- IMPORTANT: Replace with your actual X (Twitter) handle if different -->
-    <meta name="twitter:creator" content="@ankitchaudhari03"> <!-- IMPORTANT: Replace with your actual X (Twitter) handle if different -->
-    <meta name="twitter:title" content="Ankit Chaudhari - Web Developer & Innovator">
+    <meta name="twitter:site" content="@ankitchaudhari03"> <meta name="twitter:creator" content="@ankitchaudhari03"> <meta name="twitter:title" content="Ankit Chaudhari - Web Developer & Innovator">
     <meta name="twitter:description" content="Explore the official portfolio of Ankit Chaudhari (ankitchaudhari03), showcasing web development projects, front-end expertise, UI/UX design, and a passion for creating impactful digital experiences.">
     <meta name="twitter:image" content="images/og-image.jpg">
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Inline CSS for styling this page -->
     <style>
         /* Base styles for the body and HTML */
         body {
@@ -116,9 +103,9 @@
             }
         }
 
-        /* Mobile Menu (initially hidden) */
+        /* Mobile Menu - relies on Tailwind's 'hidden' class for display control */
         .mobile-nav-links {
-            display: none; /* Hidden by default, toggled by JS */
+            /* This section defines visual styles, 'display' is controlled by JS toggling 'hidden' class */
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding-top: 0.5rem;
@@ -128,9 +115,10 @@
             margin-right: 1rem;
             border-radius: 0.375rem;
         }
-        .mobile-nav-links.active { /* Class added by JS to show menu */
-            display: block;
-        }
+        /* REMOVED: .mobile-nav-links.active { display: block; }
+           This was conflicting with Tailwind's 'hidden' class.
+           The JavaScript will now only toggle the 'hidden' class. */
+
         .mobile-nav-links a, .mobile-nav-links button {
             display: block;
             padding: 0.5rem 1rem;
@@ -348,20 +336,16 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Header and Navigation -->
     <header class="site-header bg-white shadow-md py-4 sticky top-0 z-50">
         <nav class="main-nav container mx-auto px-4 flex justify-between items-center">
-            <!-- Your Name/Brand for SEO and visibility -->
             <a href="index.html" class="site-logo text-2xl font-bold text-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">Ankit Chaudhari</a>
             <div class="nav-links-desktop hidden md:flex space-x-6">
-                <!-- Navigation links opening in new tabs -->
                 <a href="index.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Home</a>
                 <a href="about.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">About</a>
                 <a href="skills.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Skills & Experience</a>
                 <a href="projects.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Projects</a>
                 <a href="contact.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Contact</a>
             </div>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="mobile-menu-toggle md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -369,7 +353,6 @@
             </button>
         </nav>
 
-        <!-- Mobile Menu (initially hidden) -->
         <div id="mobile-menu" class="mobile-nav-links hidden md:hidden bg-white shadow-lg py-2 mt-2 mx-4 rounded-md">
             <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Home</a>
             <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">About</a>
@@ -379,11 +362,8 @@
         </div>
     </header>
 
-    <!-- Hero Section (Home Page Content) -->
     <section id="home-hero" class="hero-section relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 md:py-32 flex items-center justify-center min-h-[calc(100vh-80px)] rounded-b-lg shadow-lg overflow-hidden">
         <div class="hero-content container mx-auto px-4 text-center z-10">
-            <!-- Image Suggestion: Your professional headshot -->
-            <!-- Save as: profile-photo.jpg or profile-photo.png in an 'images' folder -->
             <img src="images/profile-pic..png" alt="Ankit Chaudhari's Professional Photo" class="profile-image w-44 h-44 rounded-full mx-auto mb-8 border-4 border-white shadow-xl object-cover transform transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/180x180/ffffff/4f46e5?text=Your+Photo';">
             <h1 class="hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
                 Hello, I'm <span class="highlight-text text-yellow-300">Ankit Chaudhari</span>.
@@ -406,7 +386,6 @@
                 </a>
             </div>
         </div>
-        <!-- Simple background animation for visual appeal -->
         <div class="hero-background-blobs absolute inset-0 z-0 opacity-20">
             <div class="blob blob-1 absolute top-1/4 left-1/4 w-48 h-48 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
             <div class="blob blob-2 absolute top-1/2 right-1/4 w-48 h-48 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
@@ -414,34 +393,27 @@
         </div>
     </section>
 
-    <!-- Footer (Consistent across all pages) -->
     <footer class="site-footer bg-gray-800 text-white py-8 mt-12 rounded-t-lg shadow-inner">
         <div class="footer-content container mx-auto px-4 text-center">
-            <p class="copyright-text mb-4">&copy; 2025 Ankit Chaudhari. All rights reserved.</p>
+            <p class="copyright-text mb-4">© 2025 Ankit Chaudhari. All rights reserved.</p>
             <div class="social-links flex justify-center space-x-6">
-                <!-- Direct links to your public profiles for SEO and visibility -->
                 <a href="https://linkedin.com/in/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's LinkedIn">LinkedIn</a>
                 <a href="https://github.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's GitHub">GitHub</a>
                 <a href="https://x.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's X (Twitter)">X</a>
                 <a href="https://youtube.com/@ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's YouTube">YouTube</a>
-                <a href="https://pinterest.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Pinterest">Pinterest</a>
-                <!-- Instagram is private, so not linked here for public visibility -->
-            </div>
+                <a href="https://www.instagram.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Instagram">Instagram</a>
+                </div>
         </div>
     </footer>
 
-    <!-- Inline JavaScript for this page -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
-                    // Toggle the 'active' class on the mobile menu
-                    mobileMenu.classList.toggle('active');
-                    // Also toggle 'hidden' for Tailwind's display utility
+                    // Toggle Tailwind's 'hidden' class to show/hide the menu
                     mobileMenu.classList.toggle('hidden');
                 });
             }

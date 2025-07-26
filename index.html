@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO Title: Crucial for search engines -->
+    <title>Ankit Chaudhari - Official Portfolio | Web Developer & Innovator</title>
+    <!-- Meta Description: Provides a summary for search results -->
+    <meta name="description" content="Explore the official portfolio of Ankit Chaudhari (ankitchaudhari03), showcasing web development projects, front-end expertise, UI/UX design, and a passion for creating impactful digital experiences. Connect with Ankit on GitHub, LinkedIn, X, and more.">
+    <!-- Keywords (less critical for modern SEO, but can be helpful) -->
+    <meta name="keywords" content="Ankit Chaudhari, ankitchaudhari03, web developer, portfolio, front-end, UI/UX, user experience, web design, web development, projects, GitHub, LinkedIn, X, YouTube, Pinterest, Twitter, innovation, technology">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook / LinkedIn / X (Twitter) Meta Tags -->
+    <meta property="og:title" content="Ankit Chaudhari - Web Developer & Innovator">
+    <meta property="og:description" content="Explore the official portfolio of Ankit Chaudhari (ankitchaudhari03), showcasing web development projects, front-end expertise, UI/UX design, and a passion for creating impactful digital experiences.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- IMPORTANT: Replace with your actual website URL when deployed -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ankitchaudhari03"> <!-- IMPORTANT: Replace with your actual X (Twitter) handle if different -->
+    <meta name="twitter:creator" content="@ankitchaudhari03"> <!-- IMPORTANT: Replace with your actual X (Twitter) handle if different -->
+    <meta name="twitter:title" content="Ankit Chaudhari - Web Developer & Innovator">
+    <meta name="twitter:description" content="Explore the official portfolio of Ankit Chaudhari (ankitchaudhari03), showcasing web development projects, front-end expertise, UI/UX design, and a passion for creating impactful digital experiences.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS for styling this page -->
+    <style>
+        /* Base styles for the body and HTML */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #374151; /* Darker gray text for readability */
+            margin: 0; /* Ensure no default body margin */
+            padding: 0; /* Ensure no default body padding */
+            line-height: 1.6; /* Improve readability of text */
+        }
+
+        /* Smooth scrolling for internal links (though we're using new tabs, good for any internal page links) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styles for the active navigation link (can be applied via JS on page load) */
+        .nav-link.active {
+            font-weight: 600;
+            color: #4f46e5; /* Indigo 600 for active link */
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 2px;
+        }
+
+        /* Header and Navigation Styles */
+        .site-header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            position: sticky; /* Keeps header at the top */
+            top: 0;
+            z-index: 50; /* Ensures header is above other content */
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px; /* Max width for content */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .site-logo {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-logo:hover {
+            color: #3730a3; /* Darker indigo on hover */
+        }
+
+        .nav-links-desktop a, .nav-links-desktop button {
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 0.375rem; /* rounded-md */
+            padding: 0.5rem 0.75rem; /* py-2 px-3 */
+        }
+
+        .nav-links-desktop a:hover, .nav-links-desktop button:hover {
+            color: #4f46e5; /* indigo-600 */
+            background-color: #f3f4f6; /* gray-100 */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Mobile Menu Button (md:hidden) */
+        .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown on mobile */
+        }
+        @media (max-width: 767px) { /* md breakpoint is 768px */
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .nav-links-desktop { /* Hide desktop nav on mobile */
+                display: none;
+            }
+        }
+
+        /* Mobile Menu (initially hidden) */
+        .mobile-nav-links {
+            display: none; /* Hidden by default, toggled by JS */
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 0.375rem;
+        }
+        .mobile-nav-links a, .mobile-nav-links button {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #4b5563; /* gray-700 */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border-radius: 0.375rem;
+        }
+        .mobile-nav-links a:hover, .mobile-nav-links button:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+
+        /* Hero Section Styles (for index.html) */
+        .hero-section {
+            min-height: calc(100vh - 80px); /* Adjust based on header height */
+            border-bottom-left-radius: 0.75rem; /* rounded-b-lg */
+            border-bottom-right-radius: 0.75rem; /* rounded-b-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            overflow: hidden; /* For background blobs */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(to right, #4f46e5, #8b5cf6); /* indigo-600 to purple-700 */
+            color: #ffffff;
+            padding: 5rem 1rem; /* py-20 md:py-32 */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .profile-image {
+            width: 11rem; /* w-44 */
+            height: 11rem; /* h-44 */
+            border-radius: 9999px; /* rounded-full */
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem; /* mb-8 */
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-title {
+            font-size: 3rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            line-height: 1.25; /* leading-tight */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .hero-title {
+                font-size: 4rem; /* md:text-6xl */
+            }
+        }
+
+        .highlight-text {
+            color: #fcd34d; /* yellow-300 */
+        }
+
+        .hero-tagline, .hero-intro-paragraph, .hero-goal-statement {
+            font-size: 1.125rem; /* text-lg */
+            margin-bottom: 2rem; /* mb-8 */
+            opacity: 0.9;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .hero-tagline, .hero-intro-paragraph, .hero-goal-statement {
+                font-size: 1.5rem; /* md:text-2xl */
+            }
+        }
+
+        .hero-intro-paragraph, .hero-goal-statement {
+            font-style: italic;
+            font-size: 1rem; /* text-md */
+            margin-bottom: 2.5rem; /* mb-10 */
+            opacity: 0.8;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .hero-intro-paragraph, .hero-goal-statement {
+                font-size: 1.25rem; /* md:text-xl */
+            }
+        }
+
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem; /* space-y-4 */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .hero-buttons {
+                flex-direction: row;
+                gap: 0;
+                column-gap: 1.5rem; /* sm:space-x-6 */
+            }
+        }
+
+        .btn {
+            padding: 0.75rem 2rem; /* px-8 py-3 */
+            border-radius: 9999px; /* rounded-full */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* font-semibold */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transition: all 0.3s ease;
+            transform: scale(1);
+            outline: none; /* focus:outline-none */
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            color: #4338ca; /* indigo-700 */
+        }
+        .btn-primary:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: #4338ca; /* indigo-700 */
+        }
+
+        /* Background animation for Hero section */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+        .animate-fade-in-up.delay-500 { animation-delay: 0.5s; } /* Added for new paragraph */
+        .animate-fade-in-up.delay-600 { animation-delay: 0.6s; }
+
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
+        }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        /* Footer Styles */
+        .site-footer {
+            background-color: #1f2937; /* gray-800 */
+            color: #ffffff;
+            padding-top: 2rem; /* py-8 */
+            padding-bottom: 2rem; /* py-8 */
+            margin-top: 3rem; /* mt-12 */
+            border-top-left-radius: 0.5rem; /* rounded-t-lg */
+            border-top-right-radius: 0.5rem; /* rounded-t-lg */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* shadow-inner (custom) */
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .copyright-text {
+            margin-bottom: 1rem; /* mb-4 */
+            color: #d1d5db; /* gray-300 */
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* space-x-6 */
+        }
+
+        .social-link {
+            color: #9ca3af; /* gray-400 */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="site-header bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="main-nav container mx-auto px-4 flex justify-between items-center">
+            <!-- Your Name/Brand for SEO and visibility -->
+            <a href="index.html" class="site-logo text-2xl font-bold text-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">Ankit Chaudhari</a>
+            <div class="nav-links-desktop hidden md:flex space-x-6">
+                <!-- Navigation links opening in new tabs -->
+                <a href="index.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Home</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">About</a>
+                <a href="skills.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Skills & Experience</a>
+                <a href="projects.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Projects</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3" target="_blank">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="mobile-menu-toggle md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (initially hidden) -->
+        <div id="mobile-menu" class="mobile-nav-links hidden md:hidden bg-white shadow-lg py-2 mt-2 mx-4 rounded-md">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">About</a>
+            <a href="skills.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Skills & Experience</a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Projects</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md" target="_blank">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home Page Content) -->
+    <section id="home-hero" class="hero-section relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 md:py-32 flex items-center justify-center min-h-[calc(100vh-80px)] rounded-b-lg shadow-lg overflow-hidden">
+        <div class="hero-content container mx-auto px-4 text-center z-10">
+            <!-- Image Suggestion: Your professional headshot -->
+            <!-- Save as: profile-photo.jpg or profile-photo.png in an 'images' folder -->
+            <img src="images/profile-pic..png" alt="Ankit Chaudhari's Professional Photo" class="profile-image w-44 h-44 rounded-full mx-auto mb-8 border-4 border-white shadow-xl object-cover transform transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/180x180/ffffff/4f46e5?text=Your+Photo';">
+            <h1 class="hero-title text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                Hello, I'm <span class="highlight-text text-yellow-300">Ankit Chaudhari</span>.
+            </h1>
+            <p class="hero-tagline text-lg md:text-2xl mb-8 opacity-90 animate-fade-in-up delay-200">
+                Transforming complex challenges into elegant digital solutions.
+            </p>
+            <p class="hero-intro-paragraph text-md md:text-xl italic mb-10 opacity-80 animate-fade-in-up delay-400">
+                As an engineer deeply fascinated by the boundless possibilities of technology, my journey in the digital realm is driven by an insatiable curiosity to explore, understand, and build. I thrive on diving into the intricacies of systems, unraveling complex problems, and crafting innovative solutions that make a tangible impact. For me, coding isn't just about logic; it's about bringing ideas to life and shaping the future, one meticulously designed experience at a time.
+            </p>
+            <p class="hero-goal-statement text-md md:text-xl mb-10 opacity-80 animate-fade-in-up delay-500">
+                My passion lies in front-end development, specializing in UI/UX to build user-friendly products and create immersive web experiences that not only look great but also perform flawlessly. I am driven by a commitment to continuous learning and applying cutting-edge technologies to solve real-world problems, always seeking opportunities to grow and innovate.
+            </p>
+            <div class="hero-buttons flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up delay-600">
+                <a href="projects.html" class="btn btn-primary bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" target="_blank">
+                    Explore My Projects
+                </a>
+                <a href="contact.html" class="btn btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" target="_blank">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+        <!-- Simple background animation for visual appeal -->
+        <div class="hero-background-blobs absolute inset-0 z-0 opacity-20">
+            <div class="blob blob-1 absolute top-1/4 left-1/4 w-48 h-48 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+            <div class="blob blob-2 absolute top-1/2 right-1/4 w-48 h-48 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="blob blob-3 absolute bottom-1/4 left-1/2 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="site-footer bg-gray-800 text-white py-8 mt-12 rounded-t-lg shadow-inner">
+        <div class="footer-content container mx-auto px-4 text-center">
+            <p class="copyright-text mb-4">&copy; 2025 Ankit Chaudhari. All rights reserved.</p>
+            <div class="social-links flex justify-center space-x-6">
+                <!-- Direct links to your public profiles for SEO and visibility -->
+                <a href="https://in.linkedin.com/in/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's LinkedIn">LinkedIn</a>
+                <a href="https://github.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's GitHub">GitHub</a>
+                <a href="https://x.com/ankichaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's X (Twitter)">X</a>
+                <a href="https://youtube.com/@ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's YouTube">YouTube</a>
+                <a href="https://www.instagram.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Instagram">Instagram</a>
+                <!-- Instagram is private, so not linked here for public visibility -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inline JavaScript for this page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

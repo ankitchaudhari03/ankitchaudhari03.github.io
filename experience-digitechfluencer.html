@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Developer Intern - DigiTechFlencer | Ankit Chaudhari</title>
+    <meta name="description" content="A detailed account of Ankit Chaudhari's Java Developer Internship at DigiTechFlencer, highlighting key contributions to the software development lifecycle and proficiency in Java programming.">
+    <meta name="keywords" content="Ankit Chaudhari, Java Developer Intern, DigiTechFlencer, internship, software development, lifecycle, Java programming, Pune, professional experience, career">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook / LinkedIn / X (Twitter) Meta Tags -->
+    <meta property="og:title" content="Java Developer Intern - DigiTechFlencer">
+    <meta property="og:description" content="A detailed account of Ankit Chaudhari's Java Developer Internship at DigiTechFlencer, highlighting key contributions to the software development lifecycle and proficiency in Java programming.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://ankitchaudhari03.github.io/experience-digitechfluencer.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ankitchaudhari03">
+    <meta name="twitter:creator" content="@ankitchaudhari03">
+    <meta name="twitter:title" content="Java Developer Intern - DigiTechFlencer">
+    <meta name="twitter:description" content="A detailed account of Ankit Chaudhari's Java Developer Internship at DigiTechFlencer, highlighting key contributions to the software development lifecycle and proficiency in Java programming.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS for styling this page -->
+    <style>
+        /* Base styles for the body and HTML */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #374151;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Smooth scrolling for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styles for the active navigation link */
+        .nav-link.active {
+            font-weight: 600;
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 2px;
+        }
+
+        /* Header and Navigation Styles */
+        .site-header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .site-logo {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-logo:hover {
+            color: #3730a3;
+        }
+
+        .nav-links-desktop a, .nav-links-desktop button {
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+        }
+
+        .nav-links-desktop a:hover, .nav-links-desktop button:hover {
+            color: #4f46e5;
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-toggle {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .nav-links-desktop {
+                display: none;
+            }
+        }
+
+        .mobile-nav-links {
+            display: none;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 0.375rem;
+            position: absolute;
+            width: calc(100% - 2rem);
+            left: 1rem;
+            top: 4.5rem;
+            z-index: 40;
+        }
+        .mobile-nav-links.is-active {
+            display: block !important;
+        }
+        .mobile-nav-links a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #4b5563;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border-radius: 0.375rem;
+        }
+        .mobile-nav-links a:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* General Section Styles for all content sections */
+        .content-section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .content-section .container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            color: #4338ca;
+            margin-bottom: 3rem;
+        }
+
+        /* Detailed Experience Page Styles */
+        .experience-detail-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .experience-detail-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+        
+        .certificate-container {
+            flex: 0 0 40%;
+            max-width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .certificate-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-post-body {
+            flex: 1 1 60%;
+            background-color: #f9fafb;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .experience-post-body h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4f46e5;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        .experience-post-body h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #4b5563;
+            margin-top: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .experience-post-body p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-post-body h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        .experience-post-body ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            color: #4b5563;
+        }
+        .experience-post-body ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Back button styles */
+        .back-button-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            background-color: #4f46e5;
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-back:hover {
+            background-color: #4338ca;
+            transform: scale(1.05);
+        }
+        .btn-back svg {
+            margin-right: 0.5rem;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: 3rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .copyright-text {
+            margin-bottom: 1rem;
+            color: #d1d5db;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header and Navigation (Consistent across all pages) -->
+    <header class="site-header bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="main-nav container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="site-logo text-2xl font-bold text-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">Ankit Chaudhari</a>
+            <div class="nav-links-desktop hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3">Home</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3">About</a>
+                <a href="skills.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3">Skills & Experience</a>
+                <a href="projects.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3">Projects</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 rounded-md py-2 px-3">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="mobile-menu-toggle md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-nav-links hidden md:hidden bg-white shadow-lg py-2 mt-2 mx-4 rounded-md">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">About</a>
+            <a href="skills.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Skills & Experience</a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Projects</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Contact</a>
+        </div>
+    </header>
+
+    <!-- Detailed Experience Post -->
+    <section id="detailed-experience-post" class="content-section">
+        <div class="container mx-auto experience-detail-content">
+            <!-- Left Side: Certificate Image -->
+            <div class="certificate-container">
+                <img src="images/Internship Completion Letter - Ankit Chaudhari (1)_page-0001.jpg" alt="DigiTechFlencer Internship Certificate" class="certificate-image">
+            </div>
+
+            <!-- Right Side: Detailed Post Content -->
+            <div class="experience-post-body">
+                <h1 class="text-indigo-700">Java Developer Intern</h1>
+                <h2 class="text-indigo-600"><a href="https://digitechfluencer.com/" class="hover:underline">DigiTechFlencer</a></h2>
+                <p>Jun 2025 - Jul 2025 · Pune, Maharashtra, India</p>
+
+                <div class="mt-6">
+                    <p class="mb-4">
+                        During my 1-month Java Developer Internship at DigiTechFlencer, I gained invaluable hands-on exposure to the entire software development lifecycle, from project conceptualization to implementation. I successfully contributed to the development of Java-based applications, applying my theoretical knowledge to real-world projects and enhancing my problem-solving skills in a professional, collaborative environment.
+                    </p>
+                    <p class="mb-4">
+                        This experience deepened my understanding of Java development and strengthened my ability to work efficiently within a team. I am eager to leverage these skills and continue contributing to innovative projects in the tech industry.
+                    </p>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-indigo-600">Skills Applied:</h3>
+                    <ul class="list-disc list-inside ml-4 text-gray-600 mt-2">
+                        <li>Java Programming</li>
+                        <li>Software Development Lifecycle (SDLC)</li>
+                        <li>Problem Solving & Logic</li>
+                        <li>Team Collaboration</li>
+                        <li>Agile Methodologies</li>
+                    </ul>
+                </div>
+                
+                <h3 class="text-indigo-600 mt-8">Performance Highlights:</h3>
+                <p class="text-gray-700 mt-2">
+                    I achieved a strong performance rating of 4.5 out of 5 for my dedication and quality of work. I was proud to be recognized as one of the most important assets of the organization, a testament to my commitment and the excellent guidance I received from the team.
+                </p>
+            </div>
+        </div>
+
+        <div class="back-button-container">
+            <a href="skills.html" class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Back to Skills & Experience
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="site-footer bg-gray-800 text-white py-8 mt-12 rounded-t-lg shadow-inner">
+        <div class="footer-content container mx-auto px-4 text-center">
+            <p class="copyright-text mb-4">&copy; 2025 Ankit Chaudhari. All rights reserved.</p>
+            <div class="social-links flex justify-center space-x-6">
+                <a href="https://linkedin.com/in/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's LinkedIn">LinkedIn</a>
+                <a href="https://github.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's GitHub">GitHub</a>
+                <a href="https://x.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's X (Twitter)">X</a>
+                <a href="https://youtube.com/@ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's YouTube">YouTube</a>
+                <a href="https://www.instagram.com/ankitchaudhari03" target="_blank" class="social-link text-gray-400 hover:text-white transition-colors duration-300" title="Ankit Chaudhari's Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inline JavaScript for this page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                    if (mobileMenu.classList.contains('is-active')) {
+                        mobileMenu.classList.remove('hidden');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
